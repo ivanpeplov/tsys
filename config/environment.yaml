@@ -1,0 +1,1031 @@
+install_source_path_linux: '/home/online/PRIME_ARTIFACTS'
+install_source_path_windows: 'D:\\TSYS\\Artifacts'
+install_otc_path: 'D:\\TSYS'
+windows_artifacts_path: 'D:\\TSYS\\Archived'
+windows_config_path: 'D:\\TSYS\\Config'
+windows_installer_path: 'Primeweb-Artifacts\\PrimewebInstaller\\installer\\Prime4Installer.exe'
+#hsmi for winstation
+install_hsmi_path: 'C:\\Ncrypt'
+hsmi_artifacts_path: 'C:\\Ncrypt\\Archived'
+#
+system_name_prime: 'PRIME'                              
+system_name_online: 'ONLINE'                            
+#--------------------------------
+mail_recipients_dev: 'sergio@ucscards.ru, TimurMakhmutov@tsys.com, rgilmanov@tsys.com, aschegoleva@tsys.com, a.kustov@ucscards.ru, annasmirina@tsys.com, asafonkin@tsys.com'
+#mail_recipients_dev: 'a.kustov@ucscards.ru'
+#mail_db: 'a.kustov@ucscards.ru'
+mail_recipients_db: 'sergio@ucscards.ru, a.kustov@ucscards.ru, dmitriev.sergey@ucscards.ru, alexr@ucscards.ru, zabudko.dmitry@ucscards.ru, sidorov.maxim@ucscards.ru'
+# Notes, we have NetMgmt and ProdDMZ ips, dblinks are using ProdDMZ ips, connection to servers outside ProdDMZ are using
+# NetMgmt ips 
+QA1:
+    db_online_liquibase_url: 'jdbc:oracle:thin:@10.255.255.21:1521/onlinepdb'       
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@10.255.255.29:1521/primepdb'    
+    RDSADMIN_directories_path: '/prime/'        #install_admin.sh
+    db_host_prime: '10.255.255.29'                          #install_db_links.sh
+    db_host_online: '10.255.255.21'                      #install_db_links.sh
+    db_port_prime: '1521'                                   #install_db_links.sh
+    db_port_online: '1521'                                  #install_db_links.sh
+    db_service_prime: 'primepdb'                           #install_db_links.sh
+    db_service_online: 'onlinepdb'                         #install_db_links.sh
+    db_service_name_prime: "''"                           #install_db_links.sh
+    db_service_name_online: "''"                          #install_db_links.sh
+    institution_list: "'dbr mcity ozon'"                              #install_institutions_admin.sh
+    config_institution_list: "'cntr dbr mcity ozon'"                  #install.sh
+QA2:
+    db_online_liquibase_url: 'jdbc:oracle:thin:@10.255.255.82:1521/onlinepdb'
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@10.255.255.81:1521/primepdb'
+    RDSADMIN_directories_path: '/prime/'        #install_admin.sh
+    db_host_prime: '10.255.255.81'                          #install_db_links.sh
+    db_host_online: '10.255.255.82'                      #install_db_links.sh
+    db_port_prime: '1521'                                   #install_db_links.sh
+    db_port_online: '1521'                                  #install_db_links.sh
+    db_service_prime: 'primepdb'                           #install_db_links.sh
+    db_service_online: 'onlinepdb'                         #install_db_links.sh
+    db_service_name_prime: "''"                           #install_db_links.sh
+    db_service_name_online: "''"                          #install_db_links.sh
+    institution_list: "'dbr mcity ozon'"                              #install_institutions_admin.sh
+    config_institution_list: "'cntr dbr mcity ozon'"                  #install.sh
+UAT1:
+    db_online_liquibase_url: 'jdbc:oracle:thin:@online?TNS_ADMIN=/home/jenkins'
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@prime?TNS_ADMIN=/home/jenkins'
+    RDSADMIN_directories_path: '/prime/'        
+    db_host_prime: "''"                         
+    db_host_online: "''"                       
+    db_port_prime: "''"                                   
+    db_port_online: "''"                                  
+    db_service_prime: "''"                            
+    db_service_online: "''"                      
+    db_service_name_prime: 'prm'                 
+    db_service_name_online: 'onl'                 
+    institution_list: "'dbr mcity ozon'"                              
+    config_institution_list: "'cntr dbr mcity ozon'"                  
+UAT2:
+    db_online_liquibase_url: 'jdbc:oracle:thin:@online?TNS_ADMIN=/home/jenkins'
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@prime?TNS_ADMIN=/home/jenkins'
+    RDSADMIN_directories_path: '/prime/'        
+    db_host_prime: "''"                         
+    db_host_online: "''"                       
+    db_port_prime: "''"                                   
+    db_port_online: "''"                                  
+    db_service_prime: "''"                            
+    db_service_online: "''"                      
+    db_service_name_prime: 'prm'                 
+    db_service_name_online: 'onl'                 
+    institution_list: "'dbr mcity ozon'"                              
+    config_institution_list: "'cntr dbr mcity ozon'"                  
+PREPROD: 
+    db_online_liquibase_url: 'jdbc:oracle:thin:@online?TNS_ADMIN=/home/jenkins'
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@prime?TNS_ADMIN=/home/jenkins'
+    RDSADMIN_directories_path: '/prime/'        
+    db_host_prime: "''"                        
+    db_host_online: "''"                       
+    db_port_prime: "''"                                   
+    db_port_online: "''"                                   
+    db_service_prime: "''"                            
+    db_service_online: "''"                       
+    db_service_name_prime: 'prm'                 
+    db_service_name_online: 'onl'                 
+    institution_list: "'dbr mcity ozon'"                              
+    config_institution_list: "'cntr dbr mcity ozon'"                  
+PROD:
+    db_online_liquibase_url: 'jdbc:oracle:thin:@online?TNS_ADMIN=/home/jenkins'
+    db_prime_liquibase_url: 'jdbc:oracle:thin:@prime?TNS_ADMIN=/home/jenkins'
+    RDSADMIN_directories_path: '/prime/'        
+    db_host_prime: "''"                        
+    db_host_online: "''"                       
+    db_port_prime: "''"                                   
+    db_port_online: "''"                                   
+    db_service_prime: "''"                            
+    db_service_online: "''"                       
+    db_service_name_prime: 'prm'                 
+    db_service_name_online: 'onl'                 
+    institution_list: "'dbr mcity ozon'"                              
+    config_institution_list: "'cntr dbr mcity ozon'"                  
+# -----server section---------------
+server:
+### Region QA1 ####
+
+# Online Server
+    - name: 10.255.254.30
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: 
+        - online
+        - ncrypt
+      os: linux
+      region: QA1
+      role: 
+            - online
+            - ncrypt
+
+# BRMS Server
+    - name: 10.255.254.56
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "online"
+      os: linux
+      region: QA1
+      role: 
+            - brms
+
+# RBA server
+    - name: 10.255.254.34
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "online"
+      os: linux
+      region: QA1
+      role: 
+            - rba            
+
+# Fraud Guard server
+    - name: 10.255.254.32
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "online"
+      os: linux
+      region: QA1
+      role: 
+            - fg
+
+# PrimeGUI Web (FE Card Absent) q1-primeweb
+    - name: 10.255.251.232 
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1 #win slave?
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - web
+            # - 3 (web)
+            # - 4 (web api)
+            # - 6 (sup api)
+
+# Prime App (BE Card Absent) q1-primewebapp
+    - name: 10.255.251.230
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - app # - 2 (app)
+ 
+# Notification Service (BE Card Present)
+    - name: 10.255.251.236
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - notification # - 7
+# PTC - OTC - KM
+    - name: 10.255.250.131
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - utility # - 8
+# NCrypt win - (HSMI)
+#   - name: 
+#     schema: 1
+#     jenkins_slave: j-jenkins-slave-q1
+#     user: "jenkwinadm_sa"
+#     os: windows
+#     region: QA1
+#     role: 
+#           - hsmi   
+#
+
+### ---==== Region QA2 ===--- ####
+
+# Online Server
+    - name: 10.255.254.86
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: 
+        - online
+        - ncrypt
+      os: linux
+      region: QA2
+      role: 
+            - online
+            - ncrypt
+
+# BRMS Server
+    - name: 10.255.254.87
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "online"
+      os: linux
+      region: QA2
+      role: 
+            - brms
+
+# RBA server
+    - name: 10.255.254.85
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "online"
+      os: linux
+      region: QA2
+      role: 
+            - rba            
+
+# Fraud Guard server
+    - name: 10.255.254.84
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "online"
+      os: linux
+      region: QA2
+      role: 
+            - fg
+
+# PrimeGUI Web (FE Card Absent) q1-primeweb
+    - name: 10.255.251.248 
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2 #win slave?
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - web
+            # - 3 (web)
+            # - 4 (web api)
+            # - 6 (sup api)
+
+# Prime App (BE Card Absent) q1-primewebapp
+    - name: 10.255.251.246
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - app # - 2 (app)
+ 
+# Notification Service (BE Card Present)
+    - name: 10.255.251.252
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - notification
+# PTC - OTC - KM
+    - name: 10.255.250.139
+      schema: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - utility
+#  NCrypt win - (HSMI)
+#   - name: 
+#     schema: 1
+#     jenkins_slave: j-jenkins-slave-q2
+#     user: "jenkwinadm_sa"
+#     os: windows
+#     region: QA2
+#     role: 
+#           - hsmi  
+#
+### -----=== UAT1 ===---- ###
+
+    - name: 10.255.254.31
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u1
+      os: linux
+      user: 
+        - online
+        - ncrypt
+      region: UAT1
+      role: 
+             - online
+             - ncrypt
+
+    - name: 10.255.254.37
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u1
+      os: linux
+      user: 
+        - online
+        - ncrypt
+      region: UAT1
+      role: 
+             - online
+             - ncrypt
+ 
+    - name: 10.255.251.140
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT1
+      role: 
+             - web
+ 
+    - name: 10.255.251.141
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u1
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT1
+      role: 
+             - web
+ 
+    - name: 10.255.251.148
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT1
+      role: 
+             - app
+
+    - name: 10.255.251.149
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u1
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT1
+      role: 
+             - app
+
+    - name: 10.255.251.188
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT1
+      role: 
+             - notification
+# PTC - OTC - KM
+    - name: 10.255.250.133
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - utility
+# NCrypt win - (HSMI)
+    - name: 10.255.250.86
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - hsmi  
+ 
+    - name: 10.255.254.57
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "online"
+      os: linux
+      region: UAT1
+      role: 
+            - brms
+
+    - name: 10.255.254.36
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "online"
+      os: linux
+      region: UAT1
+      role: 
+            - rba            
+
+    - name: 10.255.254.39
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "online"
+      os: linux
+      region: UAT1
+      role: 
+            - rba            
+
+    - name: 10.255.254.33
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "online"
+      os: linux
+      region: UAT1
+      role: 
+            - fg
+
+    - name: 10.255.254.38
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "online"
+      os: linux
+      region: UAT1
+      role: 
+            - fg
+
+# U1_ACSApplicationServer1
+    - name: 10.255.251.156
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - nlb
+# U1_ACSApplicationServer2 
+    - name: 10.255.251.157
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - nlb
+### -----=== UAT2 ===---- ###
+ 
+    - name: 10.255.254.74
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      os: linux
+      user: 
+        - online
+        - ncrypt
+
+      region: UAT2
+      role: 
+             - online
+             - ncrypt
+ 
+    - name: 10.255.254.75
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      os: linux
+      user: 
+             - online
+             - ncrypt
+      region: UAT2
+      role: 
+             - online
+             - ncrypt
+ 
+# # PrimeGUI Web (FE Card Absent)
+    - name: 10.255.251.52
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT2
+      role: 
+             - web
+ 
+# # PrimeAPI Web (FE Card Absent)            
+    - name: 10.255.251.60
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT2
+      role: 
+             - app
+ 
+# # PrimeGUI Web (FE Card Absent)
+    - name: 10.255.251.53
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u2
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT2
+      role: 
+             - web
+
+# # PrimeNotification (FE Card Absent)            
+    - name: 10.255.251.99
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT2
+      role: 
+             - notification
+# PTC - OTC - KM
+    - name: 10.255.250.141
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - utility
+# hsmi win
+    - name: 10.255.250.126
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - hsmi 
+ 
+# # PrimeAPI Web (FE Card Absent)            
+    - name: 10.255.251.61
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u2
+      os: windows
+      user: "jenkwinadm_sa"
+      region: UAT2
+      role: 
+             - app
+# BRMS Server
+    - name: 10.255.254.80
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "online"
+      os: linux
+      region: UAT2
+      role: 
+            - brms
+
+# RBA server
+#10.255.254.34 q1-acsrba1
+    - name: 10.255.254.78
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "online"
+      os: linux
+      region: UAT2
+      role: 
+            - rba            
+
+# Fraud Guard server
+# q1-fguardapp	10.255.254.32
+    - name: 10.255.254.76
+      schema: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "online"
+      os: linux
+      region: UAT2
+      role: 
+            - fg
+
+# RBA server
+#10.255.254.34 q1-acsrba1
+    - name: 10.255.254.79
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "online"
+      os: linux
+      region: UAT2
+      role: 
+            - rba            
+
+# Fraud Guard server
+# q1-fguardapp	10.255.254.32
+    - name: 10.255.254.77
+      schema: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "online"
+      os: linux
+      region: UAT2
+      role: 
+            - fg 
+# U2_ACSApplicationServer1
+    - name: 10.255.251.68
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - nlb
+# U2_ACSApplicationServer2
+    - name: 10.255.251.69
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - nlb
+### -----=== PREPROD ===---- ###
+
+# Online Server
+    - name: 172.22.80.78
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: 
+        - online
+        - ncrypt
+      os: linux
+      region: PREPROD
+      role: 
+            - online
+            - ncrypt
+
+# BRMS Server
+    - name: 172.22.80.79
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "online"
+      os: linux
+      region: PREPROD
+      role: 
+            - brms
+
+# RBA server
+    - name: 172.22.80.77
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "online"
+      os: linux
+      region: PREPROD
+      role: 
+            - rba            
+
+# Fraud Guard server
+    - name: 172.22.80.76
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "online"
+      os: linux
+      region: PREPROD
+      role: 
+            - fg
+
+# PrimeGUI Web (FE Card Absent) q1-primeweb
+    - name: 172.22.80.73 
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre #win slave?
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - web
+            # - 3 (web)
+            # - 4 (web api)
+            # - 6 (sup api)
+
+# Prime App (BE Card Absent) q1-primewebapp
+    - name: 172.22.80.72
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - app # - 2 (app)
+ 
+# Notification Service (BE Card Present)
+    - name: 172.22.80.75
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - notification
+# PTC - OTC - KM
+    - name: 10.255.250.135
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - utility
+
+### -----=== PROD ===---- ###
+
+# Pro1-onlineapp1 
+    - name: 172.16.80.150
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: linux
+      user: 
+        - online
+        - ncrypt
+      region: PROD
+      role: 
+             - online
+             - ncrypt
+# Pro2-onlineapp1
+    - name: 172.17.80.150
+      schema: 1
+      node: 3
+      jenkins_slave: j-jenkins-slave-pro
+      os: linux
+      user: 
+        - online
+        - ncrypt
+      region: PROD
+      role: 
+             - online
+             - ncrypt
+# Pro1-onlineapp2 
+    - name: 172.16.80.151
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: linux
+      user: 
+             - online
+             - ncrypt
+      region: PROD
+      role: 
+             - online
+             - ncrypt
+# Pro2-onlineapp2 
+    - name: 172.17.80.151
+      schema: 2
+      node: 4
+      jenkins_slave: j-jenkins-slave-pro
+      os: linux
+      user: 
+             - online
+             - ncrypt
+      region: PROD
+      role: 
+             - online
+             - ncrypt
+ 
+# PRO1-PRWeb1
+    - name: 172.16.80.38
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - web
+
+# PRO2-PRWeb1
+    - name: 172.17.80.38
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - web
+
+# PRO1-PRWebApp1            
+    - name: 172.16.80.54
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - app
+
+# PRO2-PRWebApp1            
+    - name: 172.17.80.54
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - app
+
+# PRO1-PRWeb2
+    - name: 172.16.80.39
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - web
+
+# PRO2-PRWeb2
+    - name: 172.17.80.39
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - web
+
+# PRO1-Notific            
+    - name: 172.16.80.102
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - notification
+
+# PRO2-Notific            
+    - name: 172.17.80.102
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - notification
+
+# PRO1-PRWebApp2           
+    - name: 172.16.80.55
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - app
+
+# PRO2-PRWebApp2           
+    - name: 172.17.80.55
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      os: windows
+      user: "jenkwinadm_sa"
+      region: PROD
+      role: 
+             - app
+# ptc-otc-km
+    - name: 10.255.250.137
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - utility
+# hsmi win
+#   - name: 
+#     schema: 1
+#     jenkins_slave: j-jenkins-slave-prod
+#     user: "jenkwinadm_sa"
+#     os: windows
+#     region: PROD
+#     role: 
+#           - hsmi 
+
+# BRMS Server
+    - name: 172.16.80.170
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - brms
+
+# BRMS Server
+    - name: 172.17.80.170
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - brms
+
+# PRO1-acsrba1
+    - name: 172.16.80.182
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - rba            
+
+# PRO2-acsrba1
+    - name: 172.17.80.182
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - rba            
+
+# PRO1-fguardapp1
+    - name: 172.16.80.166
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - fg
+
+# PRO2-fguardapp1
+    - name: 172.17.80.166
+      schema: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - fg
+
+# PRO1-acsrba2
+    - name: 172.16.80.183
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - rba            
+
+# PRO2-acsrba2
+    - name: 172.17.80.183
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - rba            
+
+# PRO1-fguardapp2
+    - name: 172.16.80.167
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - fg 
+
+# PRO2-fguardapp2
+    - name: 172.17.80.167
+      schema: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "online"
+      os: linux
+      region: PROD
+      role: 
+            - fg 
+#-----NLB2 WIN balancers----------------
+# PRO1_ACSApplicationServer1
+    - name: 172.16.80.70
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - nlb
+# PRO2_ACSApplicationServer1
+    - name: 172.17.80.70
+      schema: 1
+      node: 3
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - nlb
+# PRO1_ACSApplicationServer2
+    - name: 172.16.80.71
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - nlb
+# PRO2_ACSApplicationServer2
+    - name: 172.17.80.71
+      schema: 2
+      node: 4
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - nlb
+#--------------------
+
+
+
+

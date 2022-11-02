@@ -1,0 +1,462 @@
+#--------------------------------
+zip_path: 'C:\\TSYS\\Zip'
+unzip_path: 'C:\\TSYS\\Unzip'
+ready_path: 'C:\\TSYS\\Ready'
+final_dir: 'C:\\TSYS\\WebSites'
+final_dir_test: 'C:\\TSYS\\WebSites_test'
+backup_path: 'C:\\TSYS\\Backup'
+
+cs_cs_target: 'WEB.AccessControlServerCustomerServices'
+cs_adm_target: 'WEB.AccessControlServerAdministration'
+cs_api_target: 'API.AccessControlServerCustomerServices'
+
+web_auth_target: 'Authentication'
+web_chal_target: 'Challenge'
+
+app_acs_target: 'APP.AccessControlServer'
+app_id_target: 'APP.IdentityService'
+#--------------------------------
+# mail_recipients_dev: 'sergio@ucscards.ru, a.kustov@ucscards.ru, dananiev@tsys.com, vkazakov@tsys.com, TimurMakhmutov@tsys.com'
+
+server:
+# Q1_ACS Application Server
+    - name: 10.255.251.228
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - app
+# Q1_ACS_WebServer (Internet facing)
+    - name: 10.255.251.214
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - web
+# Q1-ACS Customer Services
+    - name: 10.255.251.211
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA1
+      role: 
+            - cs
+
+### ---==== Region QA2 ===--- ####
+# Q2_ACS Application Server
+    - name: 10.255.251.244
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - app
+# Q2_ACS_WebServer (Internet facing)
+    - name: 10.255.251.133
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - web
+# Q2-ACS Customer Services
+    - name: 10.255.251.134
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-q2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: QA2
+      role: 
+            - cs
+### -----=== UAT1 ===---- ###
+# U1_applicationServer1
+    - name: 10.255.251.156
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - app
+# U1_applicationServer2
+    - name: 10.255.251.157
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - app
+# U1_webServer1
+    - name: 10.255.251.204
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - web
+# U1_webServer2
+    - name: 10.255.251.205
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - web
+# U1_ACS Customer Service1
+    - name: 10.255.251.180
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - cs
+# U1_ACS Customer Service2
+    - name: 10.255.251.180
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u1
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT1
+      role: 
+            - cs
+#U1_ACSweb F5 balancer
+    - name: 172.16.50.236
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: UAT1
+      role: 
+            - ff
+#U1_ACSweb F5 balancer
+    - name: 172.16.50.236
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: UAT1
+      role: 
+            - ff
+
+### -----=== UAT2 ===---- ###
+# U2_applicationServer1
+    - name: 10.255.251.68
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - app
+# U2_applicationServer2
+    - name: 10.255.251.69
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - app
+# U2_webServer1
+    - name: 10.255.251.44
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - web
+# U2_webServer2
+    - name: 10.255.251.45
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - web
+# U2_ACS Customer Service1
+    - name: 10.255.251.92
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - cs
+# U2_ACS Customer Service2
+    - name: 10.255.251.93
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkwinadm_sa"
+      os: windows
+      region: UAT2
+      role: 
+            - cs
+#U2_ACSweb F5 balancer
+    - name: 172.17.50.236
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: UAT2
+      role: 
+            - ff
+#U2_ACSweb F5 balancer
+    - name: 172.17.50.236
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: UAT2
+      role: 
+            - ff
+### Region PreProd ####
+# PRE_applicationServer
+    - name: 172.22.80.71
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - app
+# PRE_webServer
+    - name: 172.22.80.39
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - web
+# PRE ACS Customer Service
+    - name: 172.22.80.40
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pre
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PREPROD
+      role: 
+            - cs
+
+#-----------------------------
+# PRO1_applicationServer1
+    - name: 172.16.80.70
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - app
+# PRO2_applicationServer1
+    - name: 172.17.80.70
+      schema: 1
+      node: 3
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - app
+# PRO1_applicationServer2
+    - name: 172.16.80.71
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - app
+# PRO2_applicationServer2
+    - name: 172.17.80.71
+      schema: 2
+      node: 4
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - app
+#--------------------
+# PRO1-web1
+    - name: 172.16.80.21
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - web
+# PRO2-web1
+    - name: 172.17.80.21
+      schema: 1
+      node: 3
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - web
+# PRO1-web2
+    - name: 172.16.80.22
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - web
+# PRO2-web2
+    - name: 172.17.80.22
+      schema: 2
+      node: 4
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - web
+# PRO1_ACS Customer Service1
+    - name: 172.16.80.246
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - cs
+# PRO2_ACS Customer Service1
+    - name: 172.17.80.246
+      schema: 1
+      node: 3
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - cs
+# PRO1_ACS Customer Service2
+    - name: 172.16.80.247
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - cs
+# PRO2_ACS Customer Service2
+    - name: 172.17.80.247
+      schema: 2
+      node: 4
+      jenkins_slave: j-jenkins-slave-pro
+      user: "jenkwinadm_sa"
+      os: windows
+      region: PROD
+      role: 
+            - cs
+#PRO1_ACSweb1 F5 balancer
+    - name: 172.16.50.51
+      schema: 1
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: PROD
+      role: 
+            - ff
+#PRO2_ACSweb1 F5 balancer
+    - name: 172.17.50.51
+      schema: 1
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linix
+      region: PROD
+      role: 
+            - ff
+#PRO1_ACSweb1 F5 balancer
+    - name: 172.16.50.51
+      schema: 2
+      node: 1
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linux
+      region: PROD
+      role: 
+            - ff
+#PRO2_ACSweb1 F5 balancer
+    - name: 172.17.50.51
+      schema: 2
+      node: 2
+      jenkins_slave: j-jenkins-slave-u2
+      user: "jenkins"
+      os: linix
+      region: PROD
+      role: 
+            - ff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
